@@ -1,5 +1,4 @@
 from enum import Enum
-
 from torch import nn
 
 
@@ -10,13 +9,13 @@ class FilterOrg(int, Enum):
 
 
 class Activation(Enum):
-    relu = nn.ReLU
-    gelu = nn.GELU
-    silu = nn.SiLU
-    mish = nn.Mish
-    leaky_relu = nn.LeakyReLU 
+    relu = nn.ReLU         # Rectified Linear Unit
+    gelu = nn.GELU         # Gaussian Error Linear Unit
+    silu = nn.SiLU         # Sigmoid Linear Unit (also known as Swish)
+    mish = nn.Mish         # Mish activation function
+    leaky_relu = nn.LeakyReLU  # Leaky ReLU
 
 
 class Pooling(Enum):
-    maxpooling = nn.MaxPool2d
-    avgpooling = nn.AvgPool2d
+    maxpooling = nn.MaxPool2d  # Takes the maximum value in each window
+    avgpooling = nn.AvgPool2d  # Takes the average value in each window
