@@ -1,4 +1,4 @@
-# Building and Training a CNN from scratch
+# Finetune a pretrained Model using hte INaturalist Dataset
 This directory contains code to finetune ResNet50 using the INaturalist Dataset.
 
 ## Usage
