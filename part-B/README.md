@@ -1,4 +1,4 @@
-# Finetune a pretrained Model using hte INaturalist Dataset
+# Finetune a pretrained Model using the INaturalist Dataset
 This directory contains code to finetune ResNet50 using the INaturalist Dataset.
 
 ## Usage
