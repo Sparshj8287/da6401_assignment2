@@ -1,0 +1,47 @@
+name: "assignment2-sweep"
+method: "bayes"
+project: DA6401_Assignment2
+program: "train.py"
+metric:
+  name: val_acc
+  goal: maximize
+parameters:
+  wandb_project:
+    value: "da6401_assignment2"
+  wandb_entity:
+    value: "sjshiva8287"
+  learning_rate:  
+    distribution: uniform
+    max: 0.01
+    min: 0.0001
+  batch_size:
+    values: [8, 16]
+  epochs:
+    values: [20, 30, 40]
+  conv_layers:
+    values: [5]
+  filters:
+    values: [8, 16, 32]
+  filter_stride:
+    values: [1]
+  filter_size:
+    values: [2, 3, 4]
+  conv_activation:
+    values: ["relu", "gelu", "silu", "mish"]
+  filter_org:
+    values: ["equal", "doubling", "halving"]
+  pooling_alg:
+    values: ["maxpooling", "avgpooling"]
+  pooling_size:
+    values: [3, 4, 5]
+  pooling_stride: 
+    values: [1]
+  dense_size: 
+    values: [128, 256]
+  dense_activation: 
+    values: ["relu"]
+  dropout: 
+    distribution: uniform
+    max: 0.6
+    min: 0.1
+  
